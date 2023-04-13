@@ -1,13 +1,31 @@
-<h1>Main articles page</h1>
+<h1>Articles listing page</h1>
 
-<ul>
-  <% @articles.each do |article| %>
-    <li>
-      <h3>
-        <%= link_to article.title, article %>
-      </h3>
-    </li>
-  <% end %>
-</ul>
+<table>
+  <thead>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th colspan="3">Actions</th>
+  </tr>
+  </thead>
 
-<%= link_to "New article", new_article_path %>
+  <tbody>
+    <% @articles.each do |article| %>
+    <tr>
+      <td><%= article.title %></td>
+      <td><%= article.description %></td>
+      <td><%= link_to "Show", article %></td>
+      <td><%= link_to "Edit", edit_article_path(article) %></td>
+      <td><%= link_to "Delete", article_path(article), data: {
+        turbo_method: :delete,
+        turbo_confirm: "Are you sure?"
+      } %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<p>
+  <%= link_to "New article", new_article_path %>
+</p>
+

@@ -40,6 +40,7 @@
     <orderEntry type="library" scope="PROVIDED" name="activestorage (v7.0.4.3, rbenv: 3.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activesupport (v7.0.4.3, rbenv: 3.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="addressable (v2.8.4, rbenv: 3.2.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="bcrypt (v3.1.18, rbenv: 3.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bindex (v0.8.1, rbenv: 3.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bootsnap (v1.16.0, rbenv: 3.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="builder (v3.2.4, rbenv: 3.2.1) [gem]" level="application" />
@@ -51,12 +52,14 @@
     <orderEntry type="library" scope="PROVIDED" name="erubi (v1.12.0, rbenv: 3.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="ffi (v1.15.5, rbenv: 3.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="globalid (v1.1.0, rbenv: 3.2.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="hotwire-rails (v0.1.3, rbenv: 3.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="i18n (v1.12.0, rbenv: 3.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="image_processing (v1.12.2, rbenv: 3.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="importmap-rails (v1.1.5, rbenv: 3.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="io-console (v0.6.0, rbenv: 3.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="irb (v1.6.4, rbenv: 3.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="jbuilder (v2.11.5, rbenv: 3.2.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="kredis (v1.3.0.1, rbenv: 3.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="loofah (v2.20.0, rbenv: 3.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mail (v2.8.1, rbenv: 3.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="marcel (v1.0.2, rbenv: 3.2.1) [gem]" level="application" />
@@ -75,12 +78,14 @@
     <orderEntry type="library" scope="PROVIDED" name="puma (v5.6.5, rbenv: 3.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="racc (v1.6.2, rbenv: 3.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack (v2.2.6.4, rbenv: 3.2.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rack-mini-profiler (v3.1.0, rbenv: 3.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack-test (v2.1.0, rbenv: 3.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rails (v7.0.4.3, rbenv: 3.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rails-dom-testing (v2.0.3, rbenv: 3.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rails-html-sanitizer (v1.5.0, rbenv: 3.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="railties (v7.0.4.3, rbenv: 3.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rake (v13.0.6, rbenv: 3.2.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="redis (v4.8.1, rbenv: 3.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="regexp_parser (v2.7.0, rbenv: 3.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="reline (v0.3.3, rbenv: 3.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rexml (v3.2.5, rbenv: 3.2.1) [gem]" level="application" />
@@ -89,6 +94,7 @@
     <orderEntry type="library" scope="PROVIDED" name="sassc (v2.4.0, rbenv: 3.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sassc-rails (v2.1.2, rbenv: 3.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="selenium-webdriver (v4.8.6, rbenv: 3.2.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="spring (v4.1.1, rbenv: 3.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sprockets (v4.2.0, rbenv: 3.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sprockets-rails (v3.4.2, rbenv: 3.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sqlite3 (v1.6.2, rbenv: 3.2.1) [gem]" level="application" />
@@ -128,6 +134,8 @@
         <option value="mailer" />
         <option value="migration" />
         <option value="model" />
+        <option value="rack_mini_profiler:install" />
+        <option value="rack_profiler:install" />
         <option value="resource" />
         <option value="scaffold" />
         <option value="scaffold_controller" />
@@ -160,6 +168,8 @@
         <option value="mailer" />
         <option value="migration" />
         <option value="model" />
+        <option value="rack_mini_profiler:install" />
+        <option value="rack_profiler:install" />
         <option value="resource" />
         <option value="scaffold" />
         <option value="scaffold_controller" />
@@ -353,9 +363,19 @@
               <RakeTaskImpl description="" fullCommand="db:truncate_all" id="truncate_all" />
             </subtasks>
           </RakeTaskImpl>
+          <RakeTaskImpl id="hotwire">
+            <subtasks>
+              <RakeTaskImpl description="Install Hotwire into the app" fullCommand="hotwire:install" id="install" />
+            </subtasks>
+          </RakeTaskImpl>
           <RakeTaskImpl id="importmap">
             <subtasks>
               <RakeTaskImpl description="Setup Importmap for the app" fullCommand="importmap:install" id="install" />
+            </subtasks>
+          </RakeTaskImpl>
+          <RakeTaskImpl id="kredis">
+            <subtasks>
+              <RakeTaskImpl description="Install kredis" fullCommand="kredis:install" id="install" />
             </subtasks>
           </RakeTaskImpl>
           <RakeTaskImpl id="log">
