@@ -1,13 +1,23 @@
-<h1>Main articles page</h1>
+<h1>Articles listing page</h1>
 
-<ul>
-  <% @articles.each do |article| %>
-    <li>
-      <h3>
-        <%= link_to article.title, article %>
-      </h3>
-    </li>
-  <% end %>
-</ul>
+<table>
+  <thead>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Actions</th>
+  </tr>
+  </thead>
+
+  <tbody>
+    <% @articles.each do |article| %>
+    <tr>
+      <td><%= article.title %></td>
+      <td><%= article.description %></td>
+      <td>Placeholder</td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
 
 <%= link_to "New article", new_article_path %>
