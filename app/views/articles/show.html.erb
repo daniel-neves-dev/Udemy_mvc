@@ -3,11 +3,11 @@
 <p><strong><%= @article.title %></strong></p>
 <p><%= @article.description %></p>
 
-<div><%= link_to "Edit article", edit_article_path(@article) %></div>
+<%= link_to "Edit article", edit_article_path(@article) %> |
 
-<div><%= link_to "Delete", article_path(@article), data: {
+<%= link_to "Delete", article_path(@article), data: {
   turbo_method: :delete,
   turbo_confirm: "Are you sure?"
-} %></div>
+} %> |
 
-<div><%= link_to "Articles index", root_path %></div>
+<%= link_to "Articles index", root_path %>
