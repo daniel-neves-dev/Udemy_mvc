@@ -3,9 +3,11 @@
 <ul>
   <% @articles.each do |article| %>
     <li>
-      <h2>
+      <h3>
         <%= link_to article.title, article %>
-      </h2>
+      </h3>
     </li>
   <% end %>
 </ul>
+
+<%= link_to "New article", new_article_path %>
