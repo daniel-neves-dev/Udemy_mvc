@@ -1,13 +1,13 @@
 <h2>Show article</h2>
 
-<h3><%= @article.title %></h3>
+<p><strong><%= @article.title %></strong></p>
 <p><%= @article.description %></p>
 
-<%= link_to "Articles index", root_path %>
+<div><%= link_to "Edit article", edit_article_path(@article) %></div>
 
-<%= link_to "Edit article", edit_article_path(@article) %>
-
-<li><%= link_to "Delete", article_path(@article), data: {
+<div><%= link_to "Delete", article_path(@article), data: {
   turbo_method: :delete,
   turbo_confirm: "Are you sure?"
-} %></li>
+} %></div>
+
+<div><%= link_to "Articles index", root_path %></div>
