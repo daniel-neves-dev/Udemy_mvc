@@ -1,22 +1,28 @@
 
 <%= form_with(model: @article, local: true) do |form| %>
-  <p>
-    <%= form.label :title %><br/>
-    <%= form.text_field :title %>
-    <% @article.errors.full_messages_for(:title).each do |message|%>
-      <%= message %>
-    <% end %>
-  </p>
+  <div class = "form-group row">
+    <%= form.label :title, class: "col-2 col-form-label" %>
+    <div class="col-10">
+      <%= form.text_field :title, class: "form-control" %>
+      <% @article.errors.full_messages_for(:title).each do |message|%>
+        <%= message %>
+      <% end %>
+    </div>
+  </div>
 
-  <p>
-    <%= form.label :description %><br/>
-    <%= form.text_area :description %>
-    <% @article.errors.full_messages_for(:description).each do |message|%>
-      <%= message %>
-    <% end %>
-  </p>
+  <div class = "form-group row">
+    <%= form.label :description, class: "col-2 col-form-label" %>
+    <div class="col-10">
+      <%= form.text_area :description, rows:10, class: "form-control"%>
+      <% @article.errors.full_messages_for(:description).each do |message|%>
+        <%= message %>
+      <% end %>
+    </div>
+  </div>
 
-  <p>
-    <%= form.submit %>
-  </p>
+  <div class = "form-group row">
+    <%= form.submit class: "btn btn-outline-light btn-lg"%>
+  </div>
 <% end %>
+
+<p><%= link_to "Cancel and return to articles list", articles_path %></p>
