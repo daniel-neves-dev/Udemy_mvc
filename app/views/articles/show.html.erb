@@ -1,4 +1,4 @@
-<h2 id="index_h1">Article</h2>
+<h2 id="show-title"><%= @article.title %></h2>
 
 <div class="container">
     <div class="row">
@@ -8,8 +8,7 @@
             by Creator
           </div>
           <div class="card-body">
-            <h5 class="card-title"><%= @article.title %></h5>
-            <div class="card-text text-left"><%= simple_format(@article.description) %></div>
+            <div class="card-text" id="text-desc"><%= simple_format(@article.description) %></div>
             <%=link_to "Edit", edit_article_path(@article), class: "btn btn-outline-info"%>
             <%= link_to "Delete", article_path(@article), class: "btn btn-outline-danger", data: {
               turbo_method: :delete,
