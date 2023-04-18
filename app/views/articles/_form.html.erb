@@ -1,22 +1,27 @@
+<div class="container">
+  <div class="row justify-content-center">
+      <%= form_with(model: @article, class: "shadow p-3 mb-3 bg-info rounded", local: true) do |form| %>
 
-<%= form_with(model: @article, local: true) do |form| %>
-  <p>
-    <%= form.label :title %><br/>
-    <%= form.text_field :title %>
-    <% @article.errors.full_messages_for(:title).each do |message|%>
-      <%= message %>
-    <% end %>
-  </p>
+        <div class = "form-group row">
+          <%= form.label :title, class: "col-2 col-form-label text-light" %>
+          <div class="col-10">
+            <%= form.text_field :title, class: "form-control shadow rounded", placeholder: "Title of article" %>
+            <%= render 'shared/errors_title' %>
+          </div>
+        </div>
 
-  <p>
-    <%= form.label :description %><br/>
-    <%= form.text_area :description %>
-    <% @article.errors.full_messages_for(:description).each do |message|%>
-      <%= message %>
-    <% end %>
-  </p>
+        <div class = "form-group row">
+          <%= form.label :description, class: "col-2 col-form-label text-light" %>
+          <div class="col-10">
+            <%= form.text_area :description, rows:10, class: "form-control shadow rounded", placeholder: "Description of article"%>
+            <%= render "shared/errors_desc" %>
+          </div>
+        </div>
 
-  <p>
-    <%= form.submit %>
-  </p>
-<% end %>
+        <div class = "justify-content-center p-3">
+          <%= form.submit class: "btn btn-outline-light btn-lg"%>
+        </div>
+      <% end %>
+      <p><%= link_to "[ Cancel and return to articles list ]", articles_path, class: "text-info" %></p>
+    </div>
+</div>
