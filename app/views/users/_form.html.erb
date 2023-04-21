@@ -27,7 +27,7 @@
       </div>
 
       <div class = "justify-content-center p-3">
-        <%= form.submit "Sign UP", class: "btn btn-outline-light btn-lg"%>
+        <%= form.submit(@user.new_record? ? "Sign UP" : "Update account", class: "btn btn-outline-light btn-lg") %>
       </div>
     <% end %>
     <p><%= link_to "[ Cancel and return to articles list ]", articles_path, class: "text-info" %></p>
