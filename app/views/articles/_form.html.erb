@@ -6,7 +6,7 @@
           <%= form.label :title, class: "col-2 col-form-label text-light" %>
           <div class="col-10">
             <%= form.text_field :title, class: "form-control shadow rounded", placeholder: "Title of article" %>
-            <%= render 'shared/errors_title' %>
+            <%= render "shared/errors_messages", obj: @article %>
           </div>
         </div>
 
@@ -14,7 +14,7 @@
           <%= form.label :description, class: "col-2 col-form-label text-light" %>
           <div class="col-10">
             <%= form.text_area :description, rows:10, class: "form-control shadow rounded", placeholder: "Description of article"%>
-            <%= render "shared/errors_desc" %>
+            <%= render "shared/errors_messages", obj: @article %>
           </div>
         </div>
 
