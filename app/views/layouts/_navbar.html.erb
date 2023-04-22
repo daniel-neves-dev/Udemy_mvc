@@ -20,13 +20,27 @@
           </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled">Disabled</a>
           <div class="dropdown-menu">
             <%= link_to "Create new article", new_article_path, class: "dropdown-item" %>
             <hr class="dropdown-divider">
             <%= link_to "View all articles", articles_path, class: "dropdown-item" %>
           </div>
         </li>
+        <% if logged_in? %>
+          <li class = "nav-item">
+            <%= link_to current_user.name, user_path(current_user), class: "nav-link" %>
+          </li>
+          <li class = "nav-item">
+            <%= link_to "Logout", logout_path, class: "nav-link", method: :delete %>
+          </li>
+          <% else %>
+          <li class = "nav-item">
+            <%= link_to "Log in", login_path, class: "nav-link" %>
+          </li>
+          <li class = "nav-item">
+            <%= link_to "Sig up", signup_path, class: "nav-link" %>
+          </li>
+          <% end %>
       </ul>
       <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
