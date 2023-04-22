@@ -9,11 +9,14 @@ class SessionsController < ApplicationController
       flash[:notice] = "Logged in successfully"
       redirect_to user
     else
-      flash[:alert] = "Information not correct"
+      flash.now[:alert] = "Information not correct"
       render :new, status: :unprocessable_entity
     end
   end
 
   def destroy
+    session[:user_id] = nil
+    flash[:notice] = "Logged out"
+    redirect_to root_path
   end
 end
