@@ -1,0 +1,21 @@
+<h2 id="index_h1"><%= @user.name %></h2>
+
+<h1 id="index_h1">FOTO</h1>
+
+<% if logged_in? && @user == current_user %>
+  <div id="index_h1">
+    <%= link_to "Edit your profile", edit_user_path, class: "btn btn-outline-info" %>
+  </div>
+<% end %>
+
+<h3 id="index_h1">Articles</h3>
+
+<div class="flickr_pagination">
+  <%= will_paginate @articles, :container => false %>
+</div>
+
+<%= render "articles/article" %>
+
+<div class="flickr_pagination">
+  <%= will_paginate @articles, :container => false %>
+</div>
